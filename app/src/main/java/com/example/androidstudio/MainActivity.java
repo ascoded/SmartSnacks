@@ -3,6 +3,7 @@ package com.example.androidstudio;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -14,9 +15,18 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
 import com.example.androidstudio.databinding.ActivityMainBinding;
 
+
+
 public class MainActivity extends AppCompatActivity {
+
+    Connection connect;
+    String ConnectionResult = "";
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -62,4 +72,34 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+//OUR CODE STARTS HERE.
+    public void GetTextFromSQL(View v)
+    {
+        //TextView tx2 = (TextView) findViewById(R.id.textView2);
+        //TextView tx3 = (TextView) findViewById(R.id.textView3);
+
+        try{
+            Database connectionHelper = new Database();
+            connect = connectionHelper.connectionclass();
+            if(connect != null){
+                String query = "SELECT * FROM Item";
+                Statement st = connect.createStatement();
+                ResultSet rs = st.executeQuery(query);
+
+                while(rs.next()){
+                    //tx2.setText(rs.getString(0));
+                    //tx3.setText(rs.getString(0));
+                }
+            }else{
+                ConnectionResult = "Check connection";
+            }
+        }catch(Exception ex){
+
+    }
+
+    }
+
 }
+
