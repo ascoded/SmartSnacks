@@ -1,3 +1,4 @@
+//DB connection file
 package com.example.androidstudio;
 
 import android.annotation.SuppressLint;

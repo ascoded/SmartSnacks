@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//OUR CODE STARTS HERE
+//OUR CODE STARTS HERE.
     public void GetTextFromSQL(View v)
     {
         //TextView tx2 = (TextView) findViewById(R.id.textView2);
