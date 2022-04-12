@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:background="@drawable/side_nav_bar"
@@ -11,14 +12,23 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
-
+    <shape xmlns:android="http://schemas.android.com/apk/res/android">
+        <solid android:color="#FFFFFF" />
+        <stroke android:width="1dp" android:color="#000000" />
+        <padding android:left="1dp" android:top="1dp" android:right="1dp"
+            android:bottom="1dp" />
+    </shape>
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+
+
+        app:srcCompat="@mipmap/ic_launcher_round"
+        tools:srcCompat="@mipmap/color_logo" />
+
 
     <TextView
         android:layout_width="match_parent"
