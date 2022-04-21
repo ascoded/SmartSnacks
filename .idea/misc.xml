@@ -4,14 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.1875" />
+        <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.152" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.29658545894899235" />
         <entry key="app/src/main/res/layout/app_bar_main.xml" value="0.15806159420289856" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.311083984375" />
         <entry key="app/src/main/res/layout/dummy.xml" value="0.21438751220703126" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.15806159420289856" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1659637451171875" />
-        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.115625" />
-        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.20104166666666667" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1968139648437499" />
+
         <entry key="app/src/main/res/menu/main.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/whitebackgroundlogo.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/whitebackgroundlogo_round.xml" value="0.1" />
