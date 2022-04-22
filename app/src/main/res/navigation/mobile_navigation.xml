@@ -27,4 +27,7 @@
         android:name="com.example.androidstudio.ItemFragment"
         android:label="fragment_item_list"
         tools:layout="@layout/fragment_item_list" />
+
+
+
 </navigation>
