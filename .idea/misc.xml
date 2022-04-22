@@ -11,9 +11,11 @@
         <entry key="app/src/main/res/layout/dummy.xml" value="0.21438751220703126" />
         <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.15806159420289856" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.1659637451171875" />
+        <entry key="app/src/main/res/layout/fragment_item.xml" value="0.20104166666666667" />
+        <entry key="app/src/main/res/layout/fragment_item_list.xml" value="0.20104166666666667" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.20104166666666667" />
         <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.1968139648437499" />
-
+        <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.691472880045573" />
         <entry key="app/src/main/res/menu/main.xml" value="0.25104166666666666" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/whitebackgroundlogo.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/whitebackgroundlogo_round.xml" value="0.1" />
