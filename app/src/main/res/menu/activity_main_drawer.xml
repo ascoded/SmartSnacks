@@ -11,15 +11,15 @@
 
         <item
             android:id="@+id/nav_pantry"
-            android:icon="@drawable/ic_baseline_food_bank_24"
+            android:icon="@drawable/ic_baseline_cookie_24"
             android:title="@string/menu_pantry" />
         <item
             android:id="@+id/nav_necessities"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_baseline_check_box_24"
             android:title="@string/menu_necessities" />
         <item
             android:id="@+id/nav_recipes"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/ic_baseline_food_bank_24"
             android:title="@string/menu_recipes" />
     </group>
 </menu>
