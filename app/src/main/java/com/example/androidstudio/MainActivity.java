@@ -1,9 +1,15 @@
 package com.example.androidstudio;
 
 import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
+import android.widget.PopupWindow;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -29,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    private Button btn_setting;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,25 +46,48 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
+        /*
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_items, R.id.nav_pantry, R.id.nav_necessities)
+                R.id.nav_items, R.id.nav_pantry, R.id.nav_necessities,R.id.nav_recipes)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
     }
+
+    //add item button pop up window
+    public void buttonPopupwindow(View v){
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup,null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow,700,800, false);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0,0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+                                      @Override
+                                      public void onClick(View v) {
+                                          popupwindow.dismiss();
+                                      }
+                                  });
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
