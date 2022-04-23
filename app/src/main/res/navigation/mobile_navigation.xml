@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_items"
-        android:name="com.example.androidstudio.ui.home.HomeFragment"
+        android:name="com.example.androidstudio.ItemFragment"
         android:label="@string/menu_yourItems"
         tools:layout="@layout/fragment_item" />
 
     <fragment
         android:id="@+id/nav_pantry"
-        android:name="com.example.androidstudio.ui.gallery.GalleryFragment"
+        android:name="com.example.androidstudio.ItemFragment"
         android:label="@string/menu_pantry"
         tools:layout="@layout/fragment_item_list" />
 
     <fragment
         android:id="@+id/nav_necessities"
-        android:name="com.example.androidstudio.ui.slideshow.SlideshowFragment"
+        android:name="com.example.androidstudio.ItemFragment"
         android:label="@string/menu_necessities"
         tools:layout="@layout/fragment_item_list" />
     <fragment
@@ -27,4 +27,7 @@
         android:name="com.example.androidstudio.ItemFragment"
         android:label="fragment_item_list"
         tools:layout="@layout/fragment_item_list" />
+
+
+
 </navigation>
