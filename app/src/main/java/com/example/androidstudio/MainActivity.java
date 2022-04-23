@@ -3,14 +3,11 @@ package com.example.androidstudio;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
 import android.widget.PopupWindow;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.navigation.NavController;
@@ -25,7 +22,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import com.example.androidstudio.databinding.ActivityMainBinding;
-
+import com.google.android.material.snackbar.Snackbar;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -73,18 +70,29 @@ public class MainActivity extends AppCompatActivity {
     public void buttonPopupwindow(View v){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View viewPopupwindow = layoutInflater.inflate(R.layout.popup,null);
-        PopupWindow popupwindow = new PopupWindow(viewPopupwindow,700,800, false);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow,700,800, true);
 
         popupwindow.showAtLocation(v, Gravity.CENTER, 0,0);
 
         //closing button
         Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
         close.setOnClickListener(new View.OnClickListener() {
-                                      @Override
-                                      public void onClick(View v) {
-                                          popupwindow.dismiss();
-                                      }
-                                  });
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+        /*
+        //adding button
+        Button add = (Button) viewPopupwindow.findViewById(R.id.button_add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Snackbar.make(v, "Item(s) successfully added", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+        */
 
     }
 
