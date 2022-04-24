@@ -47,7 +47,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="220dp"
-        android:layout_marginBottom="285dp" />
+        android:layout_marginBottom="285dp"
+        android:buttonTint="@color/white" />
 
     <Button
         android:id="@+id/button_add"
