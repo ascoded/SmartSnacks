@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     //add item button pop up window
     public void buttonPopupwindow(View v){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        View viewPopupwindow = layoutInflater.inflate(R.layout.popup,null);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_item,null);
         PopupWindow popupwindow = new PopupWindow(viewPopupwindow,700,800, true);
 
         popupwindow.showAtLocation(v, Gravity.CENTER, 0,0);
