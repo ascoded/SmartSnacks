@@ -26,54 +26,8 @@
         android:layout_marginEnd="11dp"
         android:layout_marginBottom="328dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="text"
         android:autofillHints="Apple"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/item_qty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="287dp"
-        android:layout_marginBottom="302dp"
-        android:text="@string/quantity" />
-
-    <EditText
-        android:id="@+id/input_qty"
-        android:layout_width="103dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="237dp"
-        android:layout_marginBottom="252dp"
-        android:ems="10"
-        android:inputType="number"
-        android:autofillHints="1 or 3.5"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/exp_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="124dp"
-        android:layout_marginBottom="303dp"
-        android:text="@string/exp_date" />
-
-    <EditText
-        android:id="@+id/input_exp_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="252dp"
-        android:ems="10"
-        android:inputType="date"
-        android:autofillHints="1/1/2022"
         tools:ignore="LabelFor" />
 
     <TextView
@@ -83,7 +37,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="225dp"
-        android:layout_marginBottom="224dp"
+        android:layout_marginBottom="300dp"
         android:text="@string/menu_necessities" />
 
     <CheckBox
@@ -92,8 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="296dp"
-        android:layout_marginBottom="183dp" />
+        android:layout_marginEnd="220dp"
+        android:layout_marginBottom="285dp" />
 
     <Button
         android:id="@+id/button_add"
@@ -101,8 +55,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="73dp"
+        android:layout_marginHorizontal="@dimen/horizontal_spacing"
+        android:layout_marginBottom="240dp"
         android:text="@string/add" />
 
     <Button
@@ -111,9 +65,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginHorizontal="@dimen/horizontal_spacing"
+        android:layout_marginBottom="190dp"
         android:text="@string/cancel" />
+
 
 
 </RelativeLayout>
