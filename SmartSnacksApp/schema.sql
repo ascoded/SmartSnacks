@@ -1,29 +1,39 @@
 CREATE DATABASE IF NOT EXISTS smartsnacks;
 USE smartsnacks;
 
+CREATE TABLE Category(
+cid int4 AUTO_INCREMENT,
+cat_name varchar(255),
+PRIMARY KEY(cid)
+);
+
 CREATE TABLE Item(
-item_id int4  AUTO_INCREMENT,
+Iid int4  AUTO_INCREMENT,
 item_name varchar(255),
-exp_date date,
-quantity int,
-PRIMARY KEY (item_id)
+cid int4,
+PRIMARY KEY (Iid),
+FOREIGN KEY (cid) REFERENCES Category(cid)
 );
 
 CREATE TABLE Pantry(
-pItem_id int4 AUTO_INCREMENT,
-item varchar(255),
-FOREIGN KEY (pItem_id) REFERENCES Item(item_id)
+pid int4 AUTO_INCREMENT,
+item_id int4,
+quantity double,
+exp_date date,
+PRIMARY KEY(pid),
+FOREIGN KEY (item_id) REFERENCES Item(Iid)
 );
 
 CREATE TABLE Necessities(
-nItem_id int4 AUTO_INCREMENT,
-item varchar(255),
-FOREIGN KEY (nItem_id) REFERENCES Item(item_id)
+nid int4 AUTO_INCREMENT,
+item_id int4,
+PRIMARY KEY(nid),
+FOREIGN KEY(item_id) REFERENCES Item(Iid)
 );
 
 CREATE TABLE Recipe(
-recipe_id int4 AUTO_INCREMENT,
+rid int4 AUTO_INCREMENT,
+r_name varchar(255),
 recipe text,
-item varchar(255),
-PRIMARY KEY (recipe_id)
+PRIMARY KEY (rid)
 );
