@@ -1,6 +1,5 @@
 package com.example.androidstudio;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -11,8 +10,6 @@ import android.widget.PopupWindow;
 
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -68,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
 
     }
-
 
     //add item button pop up window
     public void buttonPopupwindow(View v){
