@@ -6,7 +6,11 @@
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1715" />
         <entry key="app/src/main/res/drawable/ic_baseline_check_box_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_cookie_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_fastfood_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_baseline_food_bank_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.1715" />
+        <entry key="app/src/main/res/drawable/ic_baseline_shopping_bag_24.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_fridge_icon_6.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1715" />
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.1875" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.152" />
