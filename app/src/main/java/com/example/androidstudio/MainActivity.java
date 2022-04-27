@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
+
         /*
         binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     //add item button pop up window
     public void buttonPopupwindow(View v){
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_item,null);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_pantry,null);
         PopupWindow popupwindow = new PopupWindow(viewPopupwindow,700,800, true);
 
         popupwindow.showAtLocation(v, Gravity.CENTER, 0,0);

@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    >
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable name= "title" type="String" />
     </data>
 
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/pantry_page"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/yellow">
 
 
-    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/white">
 
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/baloo"
             android:text="@{title}"
-            android:textSize="40sp"
             android:textColor="@color/green"
-            android:fontFamily="@font/baloo"/>
+            android:textSize="40sp" />
     </FrameLayout>
     <include layout="@layout/menu_bar" />
 
