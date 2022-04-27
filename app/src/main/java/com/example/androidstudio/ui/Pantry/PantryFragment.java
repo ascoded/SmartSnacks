@@ -1,5 +1,6 @@
 package com.example.androidstudio.ui.Pantry;
 
+
 import androidx.lifecycle.ViewModelProvider;
 
 import android.os.Bundle;
@@ -25,7 +26,7 @@ public class PantryFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragement_pantry, container, false);
+        return inflater.inflate(R.layout.fragment_pantry, container, false);
 
     }
 

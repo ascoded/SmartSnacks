@@ -19,7 +19,15 @@
         tools:listitem="@layout/fragment_item"
         />
 
-    <include
-        android:id="@+id/pantry_add"
-        layout="@layout/add_button" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/necessities_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add" />
+
 </RelativeLayout>
