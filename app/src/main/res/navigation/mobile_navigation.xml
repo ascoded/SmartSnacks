@@ -7,26 +7,26 @@
 
     <fragment
         android:id="@+id/nav_items"
-        android:name="com.example.androidstudio.ItemFragment"
+        android:name="com.example.androidstudio.ui.Item.ItemsFragment"
         android:label="@string/menu_yourItems"
-        tools:layout="@layout/fragment_item" />
+        tools:layout="@layout/fragment_items" />
 
     <fragment
         android:id="@+id/nav_pantry"
-        android:name="com.example.androidstudio.ItemFragment"
+        android:name="com.example.androidstudio.ui.Pantry.PantryFragment"
         android:label="@string/menu_pantry"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragement_pantry" />
 
     <fragment
         android:id="@+id/nav_necessities"
-        android:name="com.example.androidstudio.ItemFragment"
+        android:name="com.example.androidstudio.ui.Necessities.NecessitiesFragment"
         android:label="@string/menu_necessities"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragment_necessities" />
     <fragment
         android:id="@+id/nav_recipes"
-        android:name="com.example.androidstudio.ItemFragment"
+        android:name="com.example.androidstudio.ui.Recipe.RecipesFragment"
         android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" />
+        tools:layout="@layout/fragment_recipes" />
 
 
 
