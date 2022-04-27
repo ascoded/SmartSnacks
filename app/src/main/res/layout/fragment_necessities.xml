@@ -28,6 +28,7 @@
         android:layout_marginEnd="18dp"
         android:layout_marginBottom="24dp"
         android:clickable="true"
+        android:onClick="buttonPopupwindownecessities"
         android:src="@android:drawable/ic_input_add" />
 
 </RelativeLayout>

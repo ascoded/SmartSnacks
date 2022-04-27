@@ -77,31 +77,13 @@
 
         </TableRow>
 
-        <!--
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:gravity="end"
-                    android:text="Ingredient Two :" />
-
-                <EditText
-                    android:id="@+id/ingredienttwo"
-                    android:hint="Input ingredient"
-                    android:inputType="textAutoComplete" />
-
-            </TableRow>
-            -->
 
         <TableRow
             android:gravity="center_horizontal"
             android:paddingTop="20dp">
 
             <Button
-                android:id="@+id/submit_recipe"
+                android:id="@+id/button_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
@@ -112,26 +94,13 @@
 
         </TableRow>
 
-        <!--
-                <Button
-                    android:id="@+id/add_ingredient"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="10dp"
-                    android:gravity="center_horizontal"
-                    android:text="Add Ingredient"
-                    android:textAllCaps="false"
-                    android:textSize="16dp" />
-                -->
 
         <TableRow
             android:gravity="center_horizontal"
             android:paddingTop="20dp">
 
             <Button
-                android:id="@+id/button_cancel_user_data"
+                android:id="@+id/button_cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"

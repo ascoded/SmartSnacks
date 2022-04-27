@@ -15,18 +15,28 @@ import android.view.ViewGroup;
 
 import com.example.androidstudio.R;
 
+import java.util.ArrayList;
+
 public class PantryFragment extends Fragment {
 
     private PantryViewModel mViewModel;
 
-    public static PantryFragment newInstance() {
-        return new PantryFragment();
+    public PantryFragment(ArrayList<String> list) {
     }
+
+    public static PantryFragment newInstance(ArrayList<String> list) {
+        return new PantryFragment(list);
+    }
+
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_pantry, container, false);
+        //add code for view string in list here
+        
+
 
     }
 

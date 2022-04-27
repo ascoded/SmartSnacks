@@ -15,7 +15,6 @@ import com.example.androidstudio.ui.Necessities.NecessitiesFragment;
 import com.example.androidstudio.ui.Pantry.PantryFragment;
 import com.example.androidstudio.ui.Recipe.RecipesFragment;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
@@ -29,10 +28,12 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 drawer.closeDrawer(GravityCompat.START);
                 switch (id) {
                     case R.id.nav_pantry:
-                        replaceFragment(new PantryFragment());
+                        replaceFragment(new PantryFragment(pantrylist));
                         break;
                     case R.id.nav_items:
                         replaceFragment(new ItemsFragment());
@@ -109,13 +110,11 @@ public class MainActivity extends AppCompatActivity {
 
 //OUR CODE STARTS HERE.
 
-
-
     //add item button pop up window
     public void buttonPopupwindowpantry(View v) {
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View viewPopupwindow = layoutInflater.inflate(R.layout.popup_pantry, null);
-        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 800, true);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 700, true);
 
         popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
 
@@ -141,33 +140,128 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void buttonPopupwindowpitem(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_item, null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 700, true);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+    }
+
+    public void buttonPopupwindownecessities(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_necessity, null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 700, true);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+    }
+
+    public void buttonPopupwindowrecipe(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_recipe, null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 700, true);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+    }
+
     Connection connect;
     String ConnectionResult = "";
+    ArrayList<String> pantrylist = new ArrayList<String>();
+    ArrayList<String> itemList = new ArrayList<String>();
+    ArrayList<String> recipeList = new ArrayList<String>();
+    ArrayList<String> necesstitesList = new ArrayList<String>();
 
     public void GetTextFromSQL(View v) {
-        //TextView tx2 = (TextView) findViewById(R.id.textView2);
-        //TextView tx3 = (TextView) findViewById(R.id.textView3);
+        RecyclerView pantry = (RecyclerView) findViewById(R.id.pantry_list);
+        RecyclerView item = (RecyclerView) findViewById(R.id.items_list);
+        RecyclerView recipe = (RecyclerView) findViewById(R.id.recipes_list);
+        RecyclerView necessities = (RecyclerView) findViewById(R.id.necessities_list);
 
+        //TextView tx3 = (TextView) findViewById(R.id.textView3);
         try {
             Database connectionHelper = new Database();
             connect = connectionHelper.connectionclass();
-            if (connect != null) {
-                String query = "SELECT * FROM Item";
+            if (connect != null ) {
+                //change the query. this is for testing
+                String query = "SELECT item_id FROM Pantry";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
 
                 while (rs.next()) {
-                    //tx2.setText(rs.getString(0));
+                    String s = rs.getString(1);
+                    pantrylist.add(s);
+                    //tx3.setText(rs.getString(0));
+                }
+            } else {
+                ConnectionResult = "Check connection";
+            }
+            if (connect != null ) {
+                String query = "SELECT * FROM Necessities";
+                Statement st = connect.createStatement();
+                ResultSet rs = st.executeQuery(query);
+
+                while (rs.next()) {
+
+                    //tx3.setText(rs.getString(0));
+                }
+            } else {
+                ConnectionResult = "Check connection";
+            }
+            if (connect != null ) {
+                String query = "SELECT * FROM Items";
+                Statement st = connect.createStatement();
+                ResultSet rs = st.executeQuery(query);
+
+                while (rs.next()) {
+
+                    //tx3.setText(rs.getString(0));
+                }
+            } else {
+                ConnectionResult = "Check connection";
+            }
+            if (connect != null ) {
+                String query = "SELECT * FROM Recipe";
+                Statement st = connect.createStatement();
+                ResultSet rs = st.executeQuery(query);
+
+                while (rs.next()) {
+
                     //tx3.setText(rs.getString(0));
                 }
             } else {
                 ConnectionResult = "Check connection";
             }
         } catch (Exception ex) {
-
         }
-
     }
+
 }
 
 
