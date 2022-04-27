@@ -53,7 +53,7 @@ public class ItemFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragement_pantry, container, false);
+        View view = inflater.inflate(R.layout.fragment_pantry, container, false);
 
         // Set the adapter
         if (view instanceof RecyclerView) {
