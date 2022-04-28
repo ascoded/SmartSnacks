@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
     public void buttonPopupwindowpantry(View v) {
         LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
         View viewPopupwindow = layoutInflater.inflate(R.layout.popup_pantry, null);
-        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 800, true);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 600, true);
 
         popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
 
@@ -140,6 +140,58 @@ public class MainActivity extends AppCompatActivity {
         */
 
     }
+
+    public void buttonPopupwindowrecipe(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_recipe, null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 800, true);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+    }
+
+    public void buttonPopupwindowitem(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_item, null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 500, true);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+    }
+
+    public void buttonPopupwindownecessities(View v) {
+        LayoutInflater layoutInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View viewPopupwindow = layoutInflater.inflate(R.layout.popup_necessity, null);
+        PopupWindow popupwindow = new PopupWindow(viewPopupwindow, 700, 450, true);
+
+        popupwindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+
+        //closing button
+        Button close = (Button) viewPopupwindow.findViewById(R.id.button_cancel);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                popupwindow.dismiss();
+            }
+        });
+    }
+
 
     Connection connect;
     String ConnectionResult = "";
