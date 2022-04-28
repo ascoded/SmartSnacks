@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/popupwindow"
     android:layout_width="350dip"
-    android:layout_height="400dip"
+    android:layout_height="240dip"
     android:background="#A4D0A1">
 
 
@@ -11,63 +11,63 @@
         android:id="@+id/add_item"
         android:layout_width="122dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
         android:layout_marginEnd="219dp"
-        android:layout_marginBottom="377dp"
         android:text="@string/add_item" />
 
     <EditText
         android:id="@+id/input_add_item"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="27dp"
         android:layout_marginEnd="11dp"
-        android:layout_marginBottom="328dp"
+        android:autofillHints="Apple"
         android:ems="10"
         android:inputType="text"
-        android:autofillHints="Apple"
         tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/nav_necessities"
         android:layout_width="115dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="225dp"
-        android:layout_marginBottom="300dp"
         android:text="@string/menu_necessities" />
 
     <CheckBox
         android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="67dp"
         android:layout_marginEnd="220dp"
-        android:layout_marginBottom="285dp"
         android:buttonTint="@color/white" />
 
     <Button
         android:id="@+id/button_add"
         android:layout_width="338dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/horizontal_spacing"
-        android:layout_marginBottom="240dp"
+        android:layout_marginTop="112dp"
         android:text="@string/add" />
 
     <Button
         android:id="@+id/button_cancel"
         android:layout_width="338dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="@dimen/horizontal_spacing"
-        android:layout_marginBottom="190dp"
+        android:layout_marginTop="162dp"
         android:text="@string/cancel" />
 
 
