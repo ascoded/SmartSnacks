@@ -19,6 +19,7 @@ public class PantryFragment extends Fragment {
 
     private PantryViewModel mViewModel;
 
+
     public static PantryFragment newInstance() {
         return new PantryFragment();
     }
@@ -29,6 +30,8 @@ public class PantryFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_pantry, container, false);
 
     }
+
+
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {

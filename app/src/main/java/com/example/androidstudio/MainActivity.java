@@ -29,16 +29,20 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity {
 
 
     private AppBarConfiguration mAppBarConfiguration;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +67,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (id) {
                     case R.id.nav_pantry:
                         replaceFragment(new PantryFragment());
+
                         break;
                     case R.id.nav_items:
                         replaceFragment(new ItemsFragment());
@@ -79,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
     }
 
     private void replaceFragment(Fragment fragment) {
@@ -87,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.replace(R.id.framelayout, fragment);
         fragmentTransaction.commit();
     }
+
+
     //title page changing
     //code goes here
 
@@ -196,6 +204,8 @@ public class MainActivity extends AppCompatActivity {
     Connection connect;
     String ConnectionResult = "";
 
+    ArrayList <Integer> pantrylist = new ArrayList<Integer>();
+
     public void GetTextFromSQL(View v) {
         //TextView tx2 = (TextView) findViewById(R.id.textView2);
         //TextView tx3 = (TextView) findViewById(R.id.textView3);
@@ -204,11 +214,13 @@ public class MainActivity extends AppCompatActivity {
             Database connectionHelper = new Database();
             connect = connectionHelper.connectionclass();
             if (connect != null) {
-                String query = "SELECT * FROM Item";
+                String query = "SELECT pid FROM Pantry";
                 Statement st = connect.createStatement();
                 ResultSet rs = st.executeQuery(query);
 
                 while (rs.next()) {
+                    int i = rs.getInt(0);
+                    pantrylist.add(i);
                     //tx2.setText(rs.getString(0));
                     //tx3.setText(rs.getString(0));
                 }
