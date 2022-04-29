@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.Item.ItemsFragment">
+    tools:context=".ui.Pantry.PantryFragment">
 
-    <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/pantry_list"
-        android:name="com.example.androidstudio.ItemFragment"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        app:layoutManager="LinearLayoutManager"
-        tools:context=".ItemFragment"
-        tools:listitem="@layout/fragment_item"
-        />
+        android:layout_marginRight="16dp">
 
+        <TextView
+            android:id= "@+id/pantry_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="25dp"
+            android:textColor="@color/black"/>
+
+    </ScrollView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/items_add"
@@ -33,5 +33,7 @@
         android:clickable="true"
         android:onClick="buttonPopupwindowpantry"
         android:src="@android:drawable/ic_input_add" />
+
+
 
 </RelativeLayout>
