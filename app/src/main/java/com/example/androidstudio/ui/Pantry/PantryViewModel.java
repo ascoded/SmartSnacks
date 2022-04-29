@@ -1,18 +1,13 @@
 package com.example.androidstudio.ui.Pantry;
 
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
+import android.app.Application;
 
-import com.example.androidstudio.MainActivity;
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 
-public class PantryViewModel extends ViewModel {
-    private MutableLiveData<String> mText;
-    public PantryViewModel(){
-        mText = new MutableLiveData<>();
-        mText.setValue("This is your Pantry");
-    }
-    public LiveData<String> getText(){
-        return mText;
+
+public class PantryViewModel extends AndroidViewModel {
+    public PantryViewModel(@NonNull Application application) {
+        super(application);
     }
 }

@@ -1,6 +1,7 @@
 package com.example.androidstudio;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -40,9 +41,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private AppBarConfiguration mAppBarConfiguration;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //change layout on click navigation
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -66,8 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 drawer.closeDrawer(GravityCompat.START);
                 switch (id) {
                     case R.id.nav_pantry:
-                        replaceFragment(new PantryFragment());
-
+                        replaceFragmentPantry(new PantryFragment());
                         break;
                     case R.id.nav_items:
                         replaceFragment(new ItemsFragment());
@@ -87,12 +86,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // fragment replace with new fragment on activity_main fragment
     private void replaceFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.framelayout, fragment);
         fragmentTransaction.commit();
     }
+
+    private void replaceFragmentPantry(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        Bundle bundle = new Bundle();
+        bundle.putIntegerArrayList("pantryList", pantryList);
+        PantryFragment pantryFragment = new PantryFragment();
+        pantryFragment.setArguments(bundle);
+        fragmentTransaction.replace(R.id.framelayout, pantryFragment);
+        fragmentTransaction.commit();
+    }
+
+
+
 
 
     //title page changing
@@ -201,10 +215,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
     Connection connect;
     String ConnectionResult = "";
+    ArrayList <Integer> pantryList = new ArrayList<Integer>();
 
-    ArrayList <Integer> pantrylist = new ArrayList<Integer>();
 
     public void GetTextFromSQL(View v) {
         //TextView tx2 = (TextView) findViewById(R.id.textView2);
@@ -220,7 +236,7 @@ public class MainActivity extends AppCompatActivity {
 
                 while (rs.next()) {
                     int i = rs.getInt(0);
-                    pantrylist.add(i);
+                    pantryList.add(i);
                     //tx2.setText(rs.getString(0));
                     //tx3.setText(rs.getString(0));
                 }

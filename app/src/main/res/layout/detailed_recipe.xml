@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/baloo"
         android:gravity="center_horizontal"
-        android:padding="@dimen/activity_vertical_margin"
-        android:text="Recipe Name Here"
+        android:padding="20dp"
+        android:text="ligula nec sem"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/white"
         android:textSize="32sp"
@@ -29,9 +29,28 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="@dimen/text_margin"
             android:layout_marginRight="@dimen/text_margin"
-            android:text="lonngnsiojfodjs"
+            android:lineSpacingExtra="8sp"
+            android:text="Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. \nVestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.
+
+Nullam porttitor lacus at turpis. \n Donec posuere metus vitae ipsum. \n Aliquam non mauris.
+
+\n Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. \nNullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.
+
+Fusce posuere felis sed lacus. \nMorbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. \nNunc rhoncus dui vel sem.
+
+\nSed sagittis. \nNam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. \nNullam molestie nibh in lectus.
+
+\nPellentesque at nulla. \nSuspendisse potenti. \nCras in purus eu magna vulputate luctus.
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. \nVivamus vestibulum sagittis sapien. \nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+
+\nEtiam vel augue. Vestibulum rutrum rutrum neque. \nAenean auctor gravida sem.
+
+\nPraesent id massa id nisl venenatis lacinia. \nAenean sit amet justo. Morbi ut odio.
+
+\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. \nIn blandit ultrices enim. \nLorem ipsum dolor sit amet, consectetuer adipiscing elit."
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
     </ScrollView>
 
