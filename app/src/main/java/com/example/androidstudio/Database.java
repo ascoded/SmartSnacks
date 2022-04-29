@@ -14,11 +14,11 @@ public class Database {
     @SuppressLint("NewApi")
 
     public Connection connectionclass(){
-        ip = "172.1.1.0";
-        database = "SmartSnacks";
-        uname = "root";
-        pass = "pass";
-        port = "3306";
+        ip = "";
+        database = "";
+        uname = "";
+        pass = "";
+        port = "";
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
