@@ -32,7 +32,15 @@
             android:id="@+id/framelayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/appBarLayout" />
+            android:layout_below="@id/appBarLayout">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id = "@+id/mainRecyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/fragment_item"/>
+
+        </FrameLayout>
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
