@@ -14,11 +14,15 @@
         android:layout_marginRight="16dp">
 
         <TextView
-            android:id= "@+id/items_list"
+            android:id="@+id/items_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:lineSpacingExtra="14sp"
+            android:paddingTop="10dp"
+            android:text="Beans \nParsley \nCream \nThyme \nBeer \nMilk \nPeanut \nApple \nCheese \nBanana \nGrapeFruit"
+            android:textColor="@color/black"
             android:textSize="25dp"
-            android:textColor="@color/black"/>
+            android:textStyle="bold" />
 
     </ScrollView>
 

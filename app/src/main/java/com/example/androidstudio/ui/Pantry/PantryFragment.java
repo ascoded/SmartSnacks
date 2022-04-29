@@ -23,11 +23,13 @@ public class PantryFragment extends Fragment {
 
     private PantryViewModel mViewModel;
 
-    public static PantryFragment newInstance(ArrayList<Integer> list) {
+    public static PantryFragment newInstance(/*ArrayList<Integer> list*/) {
         PantryFragment pantryFragment = new PantryFragment();
-        Bundle bundle = new Bundle();
+        /*Bundle bundle = new Bundle();
         bundle.putIntegerArrayList("pantryList",list);
         pantryFragment.setArguments(bundle);
+        return pantryFragment;*/
+
         return pantryFragment;
     }
 
@@ -35,6 +37,7 @@ public class PantryFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+        /*
         View v = inflater.inflate(R.layout.fragment_pantry, container, false);
 
         TextView textView = v.findViewById(R.id.pantry_list);
@@ -46,10 +49,11 @@ public class PantryFragment extends Fragment {
         }
 
         textView.setText(s);
+         return v;
+        */
+        return inflater.inflate(R.layout.fragment_pantry, container, false);
 
 
-
-        return v;
 
 
     }

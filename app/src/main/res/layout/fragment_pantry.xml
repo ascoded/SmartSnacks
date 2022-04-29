@@ -13,12 +13,23 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp">
 
+
         <TextView
-            android:id= "@+id/pantry_list"
+            android:id="@+id/pantry_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="25dp"
-            android:textColor="@color/black"/>
+            android:paddingTop="10dp"
+            android:overScrollMode="always"
+            android:singleLine="false"
+            android:text="Beans       14      2021-12-17
+            \n\nParsley     10      2021-12-17
+            \n\nCream       4       2022-11-06
+            \n\nThyme       3       2022-05-03
+            \n\nBeer          12      2021-11-04
+            \n\nMilk            2       2022-06-18"
+            android:textColor="@color/black"
+            android:textSize="25dp" />
+
 
     </ScrollView>
 

@@ -13,11 +13,15 @@
         android:layout_marginRight="16dp">
 
         <TextView
-            android:id= "@+id/recipe_list"
+            android:id="@+id/recipe_list"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:lineSpacingExtra="10sp"
+            android:text="ligula nec sem\neget eleifend luctus \nsuspendisse potenti cras"
+            android:textColor="@color/black"
             android:textSize="25dp"
-            android:textColor="@color/black"/>
+            android:textStyle="bold" />
 
     </ScrollView>
 
